@@ -1,0 +1,17 @@
+<p>tabla-estudiantes works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Curso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiante of estudiantes">
+        <td>{{ estudiante.nombre }}</td>
+        <td>{{ estudiante.edad }}</td>
+        <td>{{ estudiante.curso }}</td>
+      </tr>
+    </tbody>
+  </table>
