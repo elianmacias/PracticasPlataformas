@@ -5,7 +5,7 @@ Integración de Sistemas y Plataformas
 Ing. Jhon Antonio Cevallos Macías 
 
 # Estudiante: 
-Vianny Darel Blondet Intriago 
+Elian Joshue Macías Mosquera 
 
 
 
