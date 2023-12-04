@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-backend-deployment
+  labels:
+    app: api-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-backend
+  template:
+    metadata:
+      labels:
+        app: api-backend
+    spec:
+      containers:
+      - name: api-backend
+        image: darel2214/equipos:4.0.0
+        env:
+        - name: MONGO_CNN
+          value: 'mongodb://admin:admin@mongodb-service:27017/proyecto?authSource=admin'
+        ports:
+        - containerPort: 3000
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: backend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: api-backend
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+
+
+
